@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+  android:background="@color/green_vine"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="From"
+        android:id="@+id/from"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:layout_margin="6dp"
+        android:textColor="@color/black"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_one"
+        android:layout_below="@+id/from"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="To"
+        android:id="@+id/to"
+        android:textStyle="bold"
+        android:layout_margin="6dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/spinner_one"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_two"
+        android:layout_below="@+id/to"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fare is :"
+        android:id="@+id/fare_text_detail"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="14dp"
+        android:layout_below="@+id/spinner_two"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+       />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Fare"
+        android:id="@+id/fare_button"
+        android:layout_below="@+id/fare_text_detail"
+        android:layout_margin="15dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        />
+
+    </RelativeLayout>
+</ScrollView>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/snackbar_"
+                >
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

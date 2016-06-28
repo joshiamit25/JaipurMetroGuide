@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Jaipur Metro Guide</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string name="contact_jaipur_1">
+
+           <b>Registered Office</b> \n \n
+
+            Khanij Bhawan\n
+            Behind Udyog Bhawan \n
+            Tilak Marg, C-Scheme \n
+            Jaipur- 302005 \n
+
+    </string>
+
+
+    <string name="contact_jaipur_2">
+
+
+           <b> Chairman &amp; Managing Director  </b>\n \n
+                Sh. Ashwini Bhagat, IAS \n
+            Ph- 0141-2385790, \n  0141-5192101 \n
+                Fax- 0141-5192103 \n
+
+    </string>
+
+    <string-array name="stations_array">
+        <item>Mansarovar (MSOR)</item>
+        <item>New Atish Market (NAMT)</item>
+        <item>Vivek Vihar (VKVR)</item>
+        <item>Shyam Nagar (SMNR)</item>
+        <item>Ram Nagar (RMNR)</item>
+        <item>Civil Lines (CLJP)</item>
+        <item>Railway Station (MRSN)</item>
+        <item>Sindhi Camp (SICP)</item>
+        <item>Chandpole (CDPE)</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_contact_jaipur__metro">Contact_jaipur_Metro</string>
+
+</resources>
