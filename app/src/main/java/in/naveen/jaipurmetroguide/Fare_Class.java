@@ -51,13 +51,11 @@ public class Fare_Class extends AppCompatActivity {
                             }
                         });
                 snackbar.show();
-                ;
+                
             }
         }, 2500);
 
-
-
-
+        
         spinner_from = (Spinner) findViewById(R.id.spinner_one);
         spinner_to = (Spinner) findViewById(R.id.spinner_two);
         fare_btn = (Button) findViewById(R.id.fare_button);
@@ -76,45 +74,33 @@ public class Fare_Class extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                     //   selected_from = "Mansarovar (MSOR)";
 						from = 0 ;
                         break;
                     case 1:
-                      //  selected_from = "New Atish Market (NAMT)";
 						from = 1;
                         break;
                     case 2:
-                     //   selected_from = "Vivek Vihar (VKVR)";
 						from = 2;
                         break;
                     case 3:
-                      //  selected_from = "Shyam Nagar (SMNR)";
 						from = 3;
                         break;
                     case 4:
-                     //   selected_from = "Ram Nagar (RMNR)";
 						from = 4;
                         break;
                     case 5:
-                     //   selected_from = "Civil Lines (CLJP)";
 						from = 5;
                         break;
                     case 6:
-                    //    selected_from = "Railway Station (MRSN)";
 						from = 6;
                         break;
                     case 7:
-                    //    selected_from = "Sindhi Camp (SICP)";
 						from = 7;
                         break;
                     case 8:
-                    //    selected_from = "Chandpole (CDPE)";
 						from = 8;
                         break;
-
-
                 }
-
             }
 
             public void onNothingSelected(AdapterView<?> parent) {
@@ -126,43 +112,32 @@ public class Fare_Class extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {
                     case 0:
-                   //     selected_to = "Mansarovar (MSOR)";
 						to = 0;
                         break;
                     case 1:
-                     //   selected_to = "New Atish Market (NAMT)";
 						to = 1;
                         break;
                     case 2:
-                      //  selected_to = "Vivek Vihar (VKVR)";
 						to = 2;
                         break;
                     case 3:
-                     //   selected_to = "Shyam Nagar (SMNR)";
 						to = 3;
                         break;
                     case 4:
-                    //    selected_to = "Ram Nagar (RMNR)";
 						to = 4;
                         break;
                     case 5:
-                     //   selected_to = "Civil Lines (CLJP)";
 						to = 5;
                         break;
                     case 6:
-                    //    selected_to = "Railway Station (MRSN)";
 						to = 6;
                         break;
                     case 7:
-                    //    selected_to = "Sindhi Camp (SICP)";
 						to = 7;
                         break;
                     case 8:
-                    //    selected_to = "Chandpole (CDPE)";
 						to = 8;
                         break;
-
-
                 }
 
             }
@@ -176,213 +151,18 @@ public class Fare_Class extends AppCompatActivity {
         fare_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 				
 				int diff = Math.abs(from - to) ;
 				
-				if(diff <3)
-				{
+				if(diff <3){
 					fare_text.setText("Fare : ₹5");
 				}
-				else if(diff > 2 && diff < 6)
-				{
+				else if(diff > 2 && diff < 6){
 					fare_text.setText("Fare : ₹10");
 				}
-				else
-				{
+				else{
 					fare_text.setText("Fare : ₹15");
 				}
-				
-
-              /**  if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Mansarovar (MSOR)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹15");
-                }
-
-
-                if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹15");
-                }
-
-
-                if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("New Atish Market (NAMT)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Vivek Vihar (VKVR)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹15");
-                }
-
-
-                if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Shyam Nagar (SMNR)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹10");
-                }
-
-
-                if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Ram Nagar (RMNR)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹10");
-                }
-
-
-                if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Civil Lines (CLJP)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹10");
-                }
-
-
-                if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Railway Station (MRSN)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹5");
-                }
-
-
-                if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Sindhi Camp (SICP)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹5");
-                }
-
-				
-                if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Mansarovar (MSOR)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("New Atish Market (NAMT)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Vivek Vihar (VKVR)"))) {
-                    fare_text.setText("Fare : ₹15");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Shyam Nagar (SMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Ram Nagar (RMNR)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Civil Lines (CLJP)"))) {
-                    fare_text.setText("Fare : ₹10");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Railway Station (MRSN)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Sindhi Camp (SICP)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } else if ((selected_from.equals("Chandpole (CDPE)")) && (selected_to.equals("Chandpole (CDPE)"))) {
-                    fare_text.setText("Fare : ₹5");
-                } **/
-
-
             }
         });
     }
