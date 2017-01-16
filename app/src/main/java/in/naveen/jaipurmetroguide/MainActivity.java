@@ -155,6 +155,7 @@ public class MainActivity extends AppCompatActivity
             Intent broswerIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.jaipurmetrorail.in/"));
             startActivity(broswerIntent);
 
+			
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
